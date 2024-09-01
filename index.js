@@ -9,7 +9,7 @@ module.exports = {
   ],
   async construct({ core, express, modeling }) {
     const router = new exp.Router()
-    express.use('/api/collections', router)
+    express.use('/collections', router)
     core.on('ready', () => setup({ modeling, router }))
   }
 }
